@@ -1,3 +1,4 @@
+require "pry"
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -40,7 +41,7 @@ class Replicator
   # and then manually execute each method to ensure
   # it returns what's expect.
   def replicate(recipe)
-
+    # binding.pry
     # Setup an instance variable for the recipe
     # so that other methods can see what the recipe is
     @recipe = recipe
@@ -137,7 +138,7 @@ class Replicator
 
     # Abort if there is no glass inside the replicator.
     return unless glass_inside_replicator
-
+    # binding.pry
     # Transport glass to the reactor where the temperature adjustment will take place.
     # If successful, @enterprise.reactor.core will now contain the glass
     # and @inside_replicator will no longer contain the glass.
