@@ -125,7 +125,7 @@ class Replicator
     # Abort if there is no glass inside the replicator or no power.
     return unless glass_inside_replicator && @power
 
-    mouse_chews_through_power_cord
+    # mouse_chews_through_power_cord
 
     # Draw power if possible and then mix ingredients around.
     if @enterprise.reactor.draw_power(3)
