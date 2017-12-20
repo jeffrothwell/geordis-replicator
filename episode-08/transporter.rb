@@ -15,9 +15,12 @@ class Transporter
   end
 
   def energize(obj, from, to)
+    # binding.pry
     return unless @power
-
-    if @enterprise.reactor.draw_power(300)
+    # the following if code block never runs, the conditional returns false
+    # we're asking too much of draw_power
+    # going to drop it from 300 to 3, like it previous episodes
+    if @enterprise.reactor.draw_power(3)
       to.contents << from.contents.delete(obj)
       return obj
     end
